@@ -15,6 +15,8 @@ const counterReducer = (state = initialState, action) => {
       return { ...state, value: state.value + 1 };
     case "DECREMENT":
       return { ...state, value: state.value - 1 };
+    case "ADD_NUMBER":
+      return { ...state, value: state.value + action.payload };
     case "TOGGLE_VISIBILITY":
       return { ...state, isVisible: !state.isVisible };
     default:

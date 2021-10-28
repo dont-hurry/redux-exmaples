@@ -20,6 +20,8 @@ const Counter = () => {
 
   const handleDecrement = () => dispatch({ type: "DECREMENT" });
 
+  const handleAddTen = () => dispatch({ type: "ADD_NUMBER", payload: 10 });
+
   const handleToggleVisibility = () => dispatch({ type: "TOGGLE_VISIBILITY" });
 
   return (
@@ -28,6 +30,7 @@ const Counter = () => {
       <div>
         <button onClick={handleIncrement}>+</button>
         <button onClick={handleDecrement}>-</button>
+        <button onClick={handleAddTen}>+10</button>
         <button onClick={handleToggleVisibility}>Toggle Visibility</button>
       </div>
     </div>

@@ -5,8 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 const Counter = () => {
   // `useSelector` accepts a function to determine which piece of data to
   // extract from the store
-  const value = useSelector((state) => state.value);
-  const isVisible = useSelector((state) => state.isVisible);
+  const { value, isVisible } = useSelector((state) => state.counter);
 
   // With `useSelector`, React Redux automatically sets up a subscription to the
   // Redux store for this component

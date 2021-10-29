@@ -16,13 +16,15 @@ const Counter = () => {
 
   const dispatch = useDispatch(); // Returns a dispatch function
 
-  const handleIncrement = () => dispatch({ type: "INCREMENT" });
+  const handleIncrement = () => dispatch({ type: "COUNTER/INCREMENT" });
 
-  const handleDecrement = () => dispatch({ type: "DECREMENT" });
+  const handleDecrement = () => dispatch({ type: "COUNTER/DECREMENT" });
 
-  const handleAddTen = () => dispatch({ type: "ADD_NUMBER", payload: 10 });
+  const handleAddTen = () =>
+    dispatch({ type: "COUNTER/ADD_NUMBER", payload: 10 });
 
-  const handleToggleVisibility = () => dispatch({ type: "TOGGLE_VISIBILITY" });
+  const handleToggleVisibility = () =>
+    dispatch({ type: "COUNTER/TOGGLE_VISIBILITY" });
 
   return (
     <div>
